@@ -1,19 +1,20 @@
 # FoxCima
 
-A responsive Arabic/English entertainment discovery landing page with a black-and-orange visual identity.
+An independent, responsive Arabic/English classic-cinema discovery website.
 
-## Files
-- `index.html` — page structure and Cinemana link/embed attempt.
-- `styles.css` — responsive visual design.
-- `app.js` — language toggle and basic search UI.
-- `manifest.json`, `fox.svg` — PWA metadata and app mark.
-- `sw.js` — lightweight offline shell cache.
+## Features
+- Responsive Arabic RTL and English LTR interface.
+- Searchable catalog with genre filters.
+- Title detail dialogs and locally stored favorites.
+- No third-party website is embedded in the page.
+- Viewing-source buttons open Internet Archive search results in a new tab. They do not claim that each result is licensed or available in every country.
+- Lightweight PWA shell and offline cache.
+
+## Content and rights
+This starter catalog contains classic-film metadata and links to search for sources. Internet Archive search results may include different editions and rights statuses. Users should verify the rights and terms of the specific item and local law before viewing, sharing, or reusing it. FoxCima does not host video files and does not claim to be a streaming service.
 
 ## Run locally
-Open `index.html` in a browser, or serve this folder using any static web server.
+Open `index.html` or serve the directory using any static web server.
 
 ## Deploy
-Import this repository into Vercel as a static site. No build command is required; the output directory is the repository root.
-
-## Important limitations
-The search UI is a front-end placeholder, not a real movie database. Connect a licensed/authorized catalog before presenting actual titles or streaming functionality. The Cinemana iframe is only an embedding attempt: the remote site may block framing through its security headers or browser policies. If blocked, use the direct official-site link. FoxCima does not bypass those controls or host/copy third-party streams.
+Deploy the repository root as a static site on Vercel. No build command is required.
