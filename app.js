@@ -37,5 +37,6 @@ $("closeDialog").addEventListener("click",()=>$("detailDialog").close());
 $("detailDialog").addEventListener("click",e=>{if(e.target.id==="detailDialog")e.currentTarget.close()});
 document.querySelectorAll(".main-nav a").forEach(a=>a.addEventListener("click",()=>{document.querySelectorAll(".main-nav a").forEach(x=>x.classList.remove("active"));a.classList.add("active")}));
 $("year").textContent=new Date().getFullYear();
+setLanguage("ar");
 fetchPage(true);
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
