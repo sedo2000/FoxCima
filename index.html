@@ -46,14 +46,14 @@
     </section>
 
     <section class="trust-strip">
-      <div><span class="strip-icon">◈</span><span data-i18n="stripOne">كتالوج مستقل</span></div>
+      <div><span class="strip-icon">◈</span><span data-i18n="stripOne">كتالوج حي</span></div>
       <div><span class="strip-icon">⌕</span><span data-i18n="stripTwo">بحث وتصنيفات</span></div>
       <div><span class="strip-icon">◎</span><span data-i18n="stripThree">مصادر خارجية واضحة</span></div>
     </section>
 
     <section class="section page-section" id="movies">
       <div class="section-heading">
-        <div><span class="section-kicker" data-i18n="moviesKicker">اختيارات FoxCima</span><h2 data-i18n="moviesTitle">أفلام تستحق الاكتشاف</h2><p data-i18n="moviesText">كتالوج أولي من السينما الكلاسيكية. ابحث بالعنوان أو اختر تصنيفًا.</p></div>
+        <div><span class="section-kicker" data-i18n="moviesKicker">اختيارات FoxCima</span><h2 data-i18n="moviesTitle">أفلام تستحق الاكتشاف</h2><p data-i18n="moviesText">أفلام حقيقية من أرشيف مفتوح، مع ملصقاتها ومعلوماتها وروابط تشغيل متاحة حسب الترخيص. ابحث بالعنوان أو اختر تصنيفًا.</p></div>
         <span id="resultCount" class="result-count"></span>
       </div>
       <div class="search-wrap"><span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="ابحث عن فيلم..." data-i18n-placeholder="searchPlaceholder" autocomplete="off"><button id="clearSearch" type="button" class="clear-btn" data-i18n="clear">مسح</button></div>
@@ -67,9 +67,11 @@
         <button class="chip" data-filter="scifi" data-i18n="scifi">خيال علمي</button>
         <button class="chip" data-filter="favorites" data-i18n="favorites">المفضلة</button>
       </div>
+      <div id="catalogStatus" class="catalog-status" role="status">جارٍ تحميل الكتالوج الحقيقي...</div>
       <div id="movieGrid" class="movie-grid" aria-live="polite"></div>
+      <button id="loadMore" class="btn btn-secondary load-more" type="button" hidden>تحميل المزيد</button>
       <div id="emptyState" class="empty-state" hidden><span>⌕</span><h3 data-i18n="noResults">لا توجد نتائج مطابقة</h3><p data-i18n="tryAnother">جرّب كلمة بحث أخرى أو غيّر التصنيف.</p></div>
-      <p class="catalog-note" data-i18n="catalogNote">تنبيه: توفر العمل وحقوق عرضه تختلف حسب البلد والمصدر. تحقّق من صفحة المصدر قبل المشاهدة.</p>
+      <p class="catalog-note" data-i18n="catalogNote">نعرض الأعمال التي تحمل بيانات ترخيص مسموحًا بها في المصدر. قد تختلف حقوق العرض حسب بلدك، وتظهر تفاصيل الترخيص في صفحة كل عمل.</p>
     </section>
 
     <section class="series-section page-section" id="series">
@@ -81,7 +83,7 @@
       <span class="section-kicker" data-i18n="aboutKicker">شفافية أولًا</span><h2 data-i18n="aboutTitle">ما هو FoxCima؟</h2>
       <div class="about-grid">
         <article><span class="about-icon">⌂</span><h3 data-i18n="aboutOneTitle">موقع مستقل</h3><p data-i18n="aboutOneText">كل صفحات التصفح والتفاصيل جزء من FoxCima. لا نضمّن واجهة أي موقع آخر داخل الصفحة.</p></article>
-        <article><span class="about-icon">↗</span><h3 data-i18n="aboutTwoTitle">مصادر واضحة</h3><p data-i18n="aboutTwoText">زر المصدر يفتح بحثًا عن العمل في أرشيف الإنترنت؛ لا يعني ذلك أن كل نتيجة مرخّصة أو متاحة في منطقتك.</p></article>
+        <article><span class="about-icon">↗</span><h3 data-i18n="aboutTwoTitle">مصادر واضحة</h3><p data-i18n="aboutTwoText">نجلب بيانات الأفلام من أرشيف الإنترنت، ولا نعرض رابط تشغيل إلا عند العثور على ملف فيديو مباشر ضمن سجل العمل. تحقق من الترخيص.</p></article>
         <article><span class="about-icon">♡</span><h3 data-i18n="aboutThreeTitle">اختياراتك محفوظة</h3><p data-i18n="aboutThreeText">يمكنك إضافة الأعمال إلى قائمتك المفضلة على هذا الجهاز.</p></article>
       </div>
       <p class="disclaimer" data-i18n="disclaimer">FoxCima دليل اكتشاف مستقل وليس خدمة بث. لا نستضيف ملفات الفيديو. يجب التحقق من حقوق العمل وشروط المصدر قبل المشاهدة أو إعادة الاستخدام.</p>
