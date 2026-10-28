@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="FoxCima — اكتشف الأفلام والمسلسلات بواجهة عربية عصرية.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="fox.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>FoxCima — عالمك السينمائي</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FoxCima home"><img src="fox.svg" alt="" class="brand-mark"><span>Fox<span class="orange">Cima</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">الرئيسية</a>
+      <a href="#movies" data-i18n="navMovies">الأفلام</a>
+      <a href="#series" data-i18n="navSeries">المسلسلات</a>
+      <a href="#cinemana" data-i18n="navCinemana">سينمانا</a>
+    </nav>
+    <div class="top-actions">
+      <button id="langToggle" class="lang-btn" type="button" aria-label="Switch language">EN</button>
+      <a class="profile" href="#discover" aria-label="Discover"><span>⌕</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="live-dot"></span><span data-i18n="heroEyebrow">وجهتك لعالم الترفيه</span></span>
+        <h1 data-i18n="heroTitle">قصتك القادمة<br><span class="orange">تبدأ هنا.</span></h1>
+        <p data-i18n="heroText">اكتشف عوالم جديدة، وأعمال تستحق المشاهدة، كل ذلك في مكان واحد.</p>
+        <div class="hero-actions">
+          <a href="#discover" class="btn btn-primary"><span>▶</span><span data-i18n="explore">استكشف الآن</span></a>
+          <a href="#cinemana" class="btn btn-secondary" data-i18n="openCinemana">افتح سينمانا</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span><span data-i18n="heroNote">واجهة اكتشاف بسيطة، بتجربة مصممة لك.</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="poster poster-back"><span>SCI-FI</span></div>
+        <div class="poster poster-mid"><span>DRAMA</span></div>
+        <div class="poster poster-front"><div class="poster-glow"></div><span class="poster-kicker">YOUR NEXT</span><strong>FAVORITE<br>STORY</strong><span class="poster-line"></span><small>FOX CIMA ORIGINAL DESIGN</small></div>
+        <div class="art-orbit"></div><div class="art-star star-one">✦</div><div class="art-star star-two">✧</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Highlights">
+      <div><span class="strip-icon">◈</span><span data-i18n="stripOne">اكتشاف سهل</span></div>
+      <div><span class="strip-icon">⌕</span><span data-i18n="stripTwo">بحث سريع</span></div>
+      <div><span class="strip-icon">◎</span><span data-i18n="stripThree">تصميم لكل شاشة</span></div>
+    </section>
+
+    <section class="section" id="discover">
+      <div class="section-heading">
+        <div><span class="section-kicker" data-i18n="discoverKicker">ابدأ رحلتك</span><h2 data-i18n="discoverTitle">ماذا تشاهد اليوم؟</h2><p data-i18n="discoverText">ابحث عن عنوان أو اختر نوع المحتوى الذي يناسب مزاجك.</p></div>
+      </div>
+      <div class="search-wrap"><span class="search-icon">⌕</span><input id="searchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="ابحث عن فيلم أو مسلسل..." autocomplete="off"><button id="searchButton" type="button" data-i18n="search">بحث</button></div>
+      <div class="chips" role="group" aria-label="Content categories">
+        <button class="chip active" data-filter="all" data-i18n="all">الكل</button>
+        <button class="chip" data-filter="action" data-i18n="action">أكشن</button>
+        <button class="chip" data-filter="drama" data-i18n="drama">دراما</button>
+        <button class="chip" data-filter="comedy" data-i18n="comedy">كوميديا</button>
+        <button class="chip" data-filter="scifi" data-i18n="scifi">خيال علمي</button>
+      </div>
+      <div id="emptyState" class="empty-state"><span>✦</span><h3 data-i18n="emptyTitle">مساحتك لاكتشاف قصص جديدة</h3><p data-i18n="emptyText">هذه الواجهة جاهزة لإضافة كتالوج مرخّص أو ربط مصدر بيانات مسموح به.</p></div>
+      <p id="searchStatus" class="search-status" aria-live="polite"></p>
+    </section>
+
+    <section class="cinemana-section" id="cinemana">
+      <div class="cinemana-copy"><span class="section-kicker" data-i18n="partnerKicker">تابع من مصدرك</span><h2 data-i18n="cinemanaTitle">سينمانا، في متناولك.</h2><p data-i18n="cinemanaText">جرّب فتح موقع سينمانا الأصلي من هنا. قد يمنع الموقع عرضه داخل إطار مضمّن؛ إذا لم يظهر المحتوى، استخدم زر الفتح المباشر.</p><a class="btn btn-primary" href="https://cinemana.shabakaty.com/home" target="_blank" rel="noopener noreferrer"><span data-i18n="openOriginal">فتح موقع سينمانا الأصلي</span><span>↗</span></a><p class="legal-note" data-i18n="legalNote">FoxCima واجهة مستقلة، وليست تابعة لسينمانا. لا نستضيف أو ننسخ محتواها.</p></div>
+      <div class="embed-shell"><div class="embed-top"><span class="window-dots"><i></i><i></i><i></i></span><span>cinemana.shabakaty.com</span><span class="secure">↗</span></div><iframe title="Cinemana website" src="https://cinemana.shabakaty.com/home" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe><div class="embed-fallback"><span>↗</span><span data-i18n="embedFallback">إذا لم يتم تحميل الصفحة، افتح الموقع الأصلي.</span></div></div>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="#"><img src="fox.svg" alt="" class="brand-mark"><span>Fox<span class="orange">Cima</span></span></a><p data-i18n="footerText">واجهة مستقلة لاكتشاف الترفيه.</p><span class="copyright">© <span id="year"></span> FoxCima</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
