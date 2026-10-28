@@ -1,4 +1,4 @@
-const CACHE_NAME="foxcima-shell-v2";
+const CACHE_NAME="foxcima-shell-v3";
 const SHELL=["./","./index.html","./styles.css","./app.js","./manifest.json","./fox.svg"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(SHELL)));self.skipWaiting()});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))));self.clients.claim()});
